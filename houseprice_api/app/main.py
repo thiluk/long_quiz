@@ -54,4 +54,4 @@ if settings.BACKEND_CORS_ORIGINS:
 if __name__ == "__main__":
     # Use this for debugging purposes only
     import uvicorn
-    uvicorn.run(app, host="192.168.1.13", port=8001)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
