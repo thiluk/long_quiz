@@ -1,0 +1,63 @@
+# Package Overview
+package_name: houseprice_model
+
+# Data Files
+training_data_file: HousingData.csv
+
+# Variables
+# The variable we are attempting to predict (cnt)
+target: MEDV
+
+pipeline_name: houseprice_model
+pipeline_save_file: houseprice__model_output_v
+
+# Features that will go inside processing pipeline
+features:
+  - CRIM
+  - ZN
+  - INDUS
+  - CHAS
+  - NOX
+  - RM
+  - AGE
+  - DIS
+  - RAD
+  - TAX
+  - PTRATIO
+  - B         
+  - LSTAT     
+
+
+unused_fields:  # Features to drop before pipeline
+  # - TAX
+
+
+# Features names
+
+CRIM_var: CRIM
+ZN_var: ZN
+INDUS_var: INDUS
+CHAS_var: CHAS
+NOX_var: NOX
+RM_var: RM
+AGE_var: AGE
+DIS_var: DIS
+RAD_var: RAD
+TAX_var: TAX
+PTRATIO_var: PTRATIO
+B_var: B  
+LSTAT_var: LSTAT     
+
+  
+# Set train/test split
+test_size: 0.20
+
+# Set the random seed
+random_state: 42
+
+# Alogrithm parameters
+n_estimators: 350
+max_depth: 15
+max_leaf_nodes: 35
+max_features: 'log2'
+min_samples_split: 10
